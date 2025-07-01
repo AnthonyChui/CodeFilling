@@ -4,9 +4,41 @@ Information Filling with Codebook
 
 
 ## Installation
-Please refer to OpenCOOD's [data introduction](https://opencood.readthedocs.io/en/latest/md_files/data_intro.html)
-and [installation](https://opencood.readthedocs.io/en/latest/md_files/installation.html) guide to prepare
-data and install CodeFilling, the installation is the same.
+Please refer to OpenCOOD's [data introduction](https://opencood.readthedocs.io/en/latest/md_files/data_intro.html) to prepare
+data.
+
+1. Clone this repository and navigate to the root folder.
+2. Create a new environment:
+    ```bash
+    conda create -n codefilling python=3.10
+    conda activate codefilling
+    ```
+3. Install PyTorch (Torch 2.7.1 with CUDA 12.6):
+    ```bash
+    pip install torch torchvision
+    ```
+4. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+5. Install `spconv`:
+    ```bash
+    pip install spconv-cu126
+    ```
+
+6. Build custom extensions:
+    ```bash
+    python setup.py develop
+    python opencood/utils/setup.py build_ext --inplace
+    # Optional:
+    python opencood/pcdet_utils/setup.py build_ext --inplace
+    ```
+
+7. Prepare logs and modality assignment:
+    ```bash
+    mkdir -p opencood/logs
+    cp -r opencood/modality_assign opencood/logs/heter_modality_assign
+    ```
 
 ## Quick Start
 

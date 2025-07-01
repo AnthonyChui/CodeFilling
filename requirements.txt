@@ -4,3 +4,11 @@ tensorboardX
 shapely
 einops
 imageio
+opencv-python
+pyyaml
+icecream
+pyquaternion
+open3d
+git+https://github.com/dimatura/pypcd.git
+torchvision
+h5py
