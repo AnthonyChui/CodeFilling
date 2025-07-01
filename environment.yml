@@ -1,16 +1,26 @@
-name: opencood
+name: codefilling
 channels:
   - defaults
+  - conda-forge
+  - pytorch
 dependencies:
-  - pip==21.1.2
-  - python==3.7.11
+  - python=3.10
+  - pip=21.1.2
+  - pytorch=2.7.1
+  - torchvision
   - pip:
-    - matplotlib==3.4.2
-    - numpy
-    - open3d
-    - opencv-python==4.5.5.62
-    - cython
-    - pygame
-    - tensorboardX
-    - shapely
-    - einops
+      - spconv-cu126
+      - matplotlib==3.4.2
+      - numpy
+      - open3d
+      - opencv-python
+      - cython
+      - pygame
+      - tensorboardX
+      - shapely
+      - einops
+      - pyyaml
+      - icecream
+      - pyquaternion
+      - h5py
+      - git+https://github.com/dimatura/pypcd.git
